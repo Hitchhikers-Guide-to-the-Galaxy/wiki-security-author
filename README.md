@@ -38,6 +38,12 @@ Who you are comes from a local identity file (the machine is the login):
   parchment background, an amber top stripe, and a small `local mirror` badge —
   so when `/etc/hosts` is diverting real domain names you always know you are
   looking at the local copy, not the live site.
+- **`window.isLocalMirror` flag.** The client also sets `window.isLocalMirror =
+  true` at script load — the machine-readable form of the same fact. Local-first
+  plugins (e.g. wiki-plugin-terminal) use it to offer live behaviour on
+  mirror-served public domains, where the hostname alone says nothing about
+  being local. Live sites never serve this client, so the flag never appears
+  there.
 
 ## Install
 

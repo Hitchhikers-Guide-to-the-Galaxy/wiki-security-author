@@ -4,6 +4,14 @@
 // This file is served only by farms running wiki-security-author (the mirror),
 // so the cue appears on every mirror wiki and never on live sites — the
 // distinction that matters when /etc/hosts is diverting real domain names.
+//
+// window.isLocalMirror is the machine-readable form of the same fact: set at
+// script load (before plugins bind), it lets local-first plugins (terminal,
+// termflow) offer their live behaviour on mirror-served public domains, where
+// the hostname alone says nothing about being local. Live sites never load
+// this file, so the flag can never appear there.
+window.isLocalMirror = true
+
 window.plugins.security = {
   setup: function () {
     var icon = window.isOwner ? "✍️" : "🔒"

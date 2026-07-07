@@ -1,6 +1,6 @@
 {
   "name": "wiki-security-author",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Federated wiki security: per-site authorization from a local identity file, with provenance-stamped journal actions. For local mirror farms ONLY - identity is asserted, not proven.",
   "main": "index.js",
   "files": [
